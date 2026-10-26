@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void mostrar_saudacoes();
+
+int main()
+{
+    int cont;
+    cont = 0;
+    
+    while (cont < 3){
+        mostrar_saudacoes();
+        cont ++;
+    }
+}
+
+void mostrar_saudacoes() {
+    printf("Bem vindo ao mundo das funcoes em C! \n");
+}

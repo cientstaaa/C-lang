@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+
+int maiorNumero(int num1, int num2);
+
+int main()
+{
+    int num1, num2, result;
+    
+    printf("Digite dois numeros e veja qual eh o maior: \n");
+    scanf("%d %d", &num1, &num2);
+    
+    result = maiorNumero(num1, num2);
+    printf("o maior numero eh: %d", result);
+}
+
+int maiorNumero(int num1, int num2) {
+    if (num1 == num2 || num1 > num2){
+        return num1;
+    }else{
+            return num2;
+        }
+}

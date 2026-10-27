@@ -11,8 +11,6 @@ int main() {
     result = celsiusParaFahrenheit(celsius);
     
     printf("%0.f gruas celsius em fahrenheit fica: %.2f graus \n",celsius, result);
-
-    return 0;
 }
 
 float celsiusParaFahrenheit(float celsius) {

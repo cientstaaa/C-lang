@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int ehPar(int num);
+
+int main() {
+    int num, result;
+
+    printf("Digite um numero e veja se ele eh par: \n ");
+    scanf("%d", &num);
+    result = ehPar(num);
+    if (result == 0){
+        printf("par");
+    }else{
+        printf("impar");
+    }
+    
+}
+
+int ehPar(int num) {
+    if (num%2 == 0){
+        return 0;
+    }else{
+        return 1;
+    }
+}

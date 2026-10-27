@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+float calcularTotal(float v1, float v2, float v3, float v4, float v5);
+
+float calcularMedia(float total);
+
+int contarVendasAcimaDaMedia(float v1, float v2, float v3, float v4, float v5, float media);
+
+int main() {
+    float v1, v2, v3, v4, v5;
+    float total, media;
+    int acimaDaMedia;
+
+    printf("Digite a venda dos 5 dias: ");
+    scanf("%f %f %f %f %f", &v1, &v2, &v3, &v4, &v5);
+
+    total = calcularTotal(v1, v2, v3, v4, v5);
+    media = calcularMedia(total);
+    acimaDaMedia = contarVendasAcimaDaMedia(v1, v2, v3, v4, v5, media);
+
+    printf("Total vendido: %.2f \n", total);
+    printf("Media diaria de vendas: %.2f \n", media);
+    printf("Dias com venda acima da media: %d \n", acimaDaMedia);
+}
+
+float calcularTotal(float v1, float v2, float v3, float v4, float v5){
+    return v1 + v2 + v3 + v4 + v5;
+}
+
+float calcularMedia(float total){
+    return total / 5;
+}
+
+int contarVendasAcimaDaMedia(float v1, float v2, float v3, float v4, float v5, float media) {
+    int contador = 0;
+
+    if (v1 > media){
+      contador++;
+    }
+    if (v2 > media){
+      contador++;
+    }
+    if (v3 > media){
+      contador++;
+    }
+    if (v4 > media){
+      contador++;
+    }
+    if (v5 > media){
+      contador++;
+    }
+    return contador;
+}

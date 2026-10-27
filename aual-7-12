@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+int calcularTotalEstoque(int estoque[], int qtd);
+int contarEstoqueBaixo(int estoque[], int qtd);
+int buscarProduto(int estoque[], int qtd, int codigo);
+
+int main() {
+    int estoque[8];
+    int codigo, qtd, posicao;
+
+    qtd = 8;
+
+    for (int i = 0; i < qtd; i++) {
+        printf("Digite a quantidade do produto %d: ", i + 1);
+        scanf("%d", &estoque[i]);
+    }
+
+    printf("Total em estoque: %d \n", calcularTotalEstoque(estoque, qtd));
+    printf("Produtos com estoque baixo: %d \n", contarEstoqueBaixo(estoque, qtd));
+
+    printf("Digite o codigo do produto (1 a %d): \n", qtd);
+    scanf("%d", &codigo);
+
+    posicao = buscarProduto(estoque, qtd, codigo);
+
+    if (posicao != -1) {
+        printf("Produto %d encontrado na posicao %d do vetor.\n", codigo, posicao);
+        printf("Quantidade em estoque: %d\n", estoque[posicao]);
+    } else {
+        printf("Produto %d nao existe.\n", codigo);
+    }
+
+    return 0;
+}
+
+int calcularTotalEstoque(int estoque[], int qtd){
+    int total = 0;
+
+    for (int i = 0; i < qtd; i++){
+        total += estoque[i];
+    }
+    return total;
+}
+
+int contarEstoqueBaixo(int estoque[], int qtd){
+    int contador = 0;
+
+    for (int i = 0; i < qtd; i++){
+        if (estoque[i] < 5){
+            contador++;
+        }
+    }
+    return contador;
+}
+
+int buscarProduto(int estoque[], int qtd, int codigo){
+    if (codigo < 1 || codigo > qtd){
+        return -1;
+    }
+    return codigo - 1;
+}

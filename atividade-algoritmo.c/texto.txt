@@ -1,0 +1,29 @@
+Esboço de Requisitos
+
+Cadastro de produtos: desenvolvam uma função que permita cadastrar até 10 produtos. Para cada produto, deverão ser informados o nome, o preço unitário e a quantidade disponível em estoque. Armazenem os dados em vetores.
+
+Consulta de estoque: desenvolvam uma função que exiba todos os produtos cadastrados, apresentando nome, preço unitário e quantidade disponível em estoque.
+
+Registro de venda: Desenvolvam uma função que receba o código de um produto e a quantidade que o cliente deseja comprar. A função deverá verificar se existe quantidade suficiente em estoque. Caso exista, deverá registrar a venda e atualizar a quantidade disponível. Caso contrário, deverá informar que a venda não pode ser realizada.
+
+Alerta de reposição: Desenvolvam uma função que percorra o estoque e identifique os produtos com menos de cinco unidades disponíveis. Para cada produto nessa situação, o programa deverá exibir seu nome e sua quantidade atual.
+
+Entrada de mercadorias: Desenvolvam uma função que receba o código de um produto e a quantidade de unidades recebidas em uma nova entrega. O programa deverá acrescentar essas unidades à quantidade existente em estoque, validando para que não sejam informadas quantidades negativas ou iguais a zero.
+
+Faturamento da venda: Desenvolvam uma função que receba o preço unitário de um produto e a quantidade vendida, retornando o valor total da venda. Após cada operação, o programa deverá exibir o valor calculado.
+
+
+
+Menu principal: na função main(), implementem um menu que permita ao usuário escolher entre as seguintes opções:
+
+Cadastrar produtos.
+Consultar estoque.
+Registrar venda.
+Consultar produtos que precisam de reposição.
+Registrar entrada de mercadorias.
+Encerrar o programa.
+O menu deverá continuar sendo exibido até que o usuário escolha a opção de encerrar. Organizem o código utilizando funções específicas para cada operação.
+
+Valor total do estoque:
+
+Desenvolvam uma função que calcule e retorne o valor financeiro total dos produtos armazenados. O cálculo deverá considerar o preço unitário multiplicado pela quantidade disponível de cada produto. Ao final, o programa deverá apresentar o valor total do estoque.
